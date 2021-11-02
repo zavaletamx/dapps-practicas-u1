@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PracticaunoFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <Button
+            android:layout_width="1dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:text="Versión 1\n(ConstraintLayout)"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="10sp"
+            />
+
+        <Button
+            android:layout_width="1dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:text="Versión 2\n(LinearLayout)"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="10sp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

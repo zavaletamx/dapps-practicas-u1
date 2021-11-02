@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PracticatresFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:src="@drawable/mexico"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generación de CURP"
+            android:textAlignment="center"
+            android:layout_marginVertical="20dp"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="1.- Datos generales"
+            android:drawableTint="#000"
+            android:drawablePadding="10dp"
+            android:paddingHorizontal="10dp"
+            android:drawableStart="@drawable/ic_account_box" />
+
+        <EditText
+            android:id="@+id/et_nombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombres"
+            android:inputType="textPersonName"
+            android:maxLength="70"
+            android:layout_margin="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="12">
+
+            <EditText
+                android:layout_width="1dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:hint="Apellido 1"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:layout_margin="10dp" />
+
+            <EditText
+                android:layout_width="1dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:hint="Apellido 2"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+
+        <!--
+        Componentes de selección
+        RadioButton
+            Destinado a seleccionar un elemento
+            de un grupo SOLO UNO
+        Spinner
+            Destinado a seleccionar un elemento
+            de un listado SOLO UNO
+        CheckBox
+            Destinado a selecciona N elementos
+            y no pertenece a un grupo necesariamente
+        Switch
+            Destinado a aplicar un estado
+            Prendido / Apgado
+        -->
+
+        <!-- RadioGroup indica que todos los Radios
+        contenidos son del mimos grupo y por ende SOLO UNO
+        se puede seleccionar -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexo de nacimiento"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="12"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/rb_mujer"
+                android:layout_width="1dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="Mujer"
+                android:drawableStart="@drawable/ic_woman"/>
+
+            <RadioButton
+                android:id="@+id/rb_hombre"
+                android:layout_width="1dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="Hombre"
+                android:drawableStart="@drawable/ic_man"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha de nacimiento"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="12"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="Día" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="Mes" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:text="Año" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="12"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp">
+
+            <Spinner
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:entries="@array/dias_calendario"/>
+
+            <Spinner
+                android:id="@+id/sp_mes_nacimiento"
+                android:layout_width="1dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:entries="@array/meses_calendario"/>
+
+            <EditText
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="4 dígitos"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado de nacimiento"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/estados_mx"/>
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acepto los términos"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generar el CURP del usuario utilizando la siguiente nomenclatura:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.- Utilizar la primer consonante y la primer vocal del primer apellido, en caso de no existir alguna, sustituir por una 'x'"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.- Utilizar la primer consonante del segundo apellido, en caso de no existir, sustituir por una 'x'"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.- Utilizar la primer letra del primer nombre, en caso de no existir, sustituir por una 'x'"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.- Concatenar la fecha de nacimiento a 2 dígitos (aammdd)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.- Utilizar un caracter para el sexo de nacimiento (M/H)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6.- Agregar el código del estado de nacimiento (se adjuntan códigos)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7.- Agregar la segunda consonante del primer apellido, en caso de no existir, reemplazar por una 'x'"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8.- Agregar la segunda consonante del segundo apellido, en caso de no existir, reemplazar por una 'x'"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9.- Agregar la segunda consonante del primer nombre, en caso de no existir, reemplazar por una 'x'"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10.- Agregar dos dígitos de manera aleatorioa del 0 al 9 cada dígito"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="20dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_estados_curp_1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_estados_curp_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="12"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_curp"
+                android:layout_width="1dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="Generar CURP"
+                android:paddingVertical="15dp"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/ic_check_circle"
+                android:onClick="generaCURP"/>
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:text="Limpiar todo"
+                android:paddingVertical="15dp"
+                android:layout_margin="5dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

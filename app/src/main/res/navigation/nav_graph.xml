@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MenuFragment">
+
+    <fragment
+        android:id="@+id/MenuFragment"
+        android:name="mx.edu.uteq.dapps.prcticasunidad1dapps.MenuFragment"
+        android:label="Menú"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_m_to_p1"
+            app:destination="@id/PracticaunoFragment" />
+
+        <action
+            android:id="@+id/action_m_to_p2"
+            app:destination="@id/PracticadosFragment" />
+
+        <action
+            android:id="@+id/action_m_to_p3"
+            app:destination="@id/PracticatresFragment" />
+
+        <action
+            android:id="@+id/action_m_to_p4"
+            app:destination="@id/PracticacuatroFragment" />
+
+        <action
+            android:id="@+id/action_m_to_p5"
+            app:destination="@id/PracticacincoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PracticaunoFragment"
+        android:name="mx.edu.uteq.dapps.prcticasunidad1dapps.PracticaunoFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_practicauno" />
+
+
+    <fragment
+        android:id="@+id/PracticadosFragment"
+        android:name="mx.edu.uteq.dapps.prcticasunidad1dapps.PracticadosFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_practicados" />
+
+    <fragment
+        android:id="@+id/PracticatresFragment"
+        android:name="mx.edu.uteq.dapps.prcticasunidad1dapps.PracticatresFragment"
+        android:label="Práctica 3"
+        tools:layout="@layout/fragment_practicatres" />
+
+    <fragment
+        android:id="@+id/PracticacuatroFragment"
+        android:name="mx.edu.uteq.dapps.prcticasunidad1dapps.PracticacuatroFragment"
+        android:label="Práctica 4"
+        tools:layout="@layout/fragment_practicacuatro" />
+
+    <fragment
+        android:id="@+id/PracticacincoFragment"
+        android:name="mx.edu.uteq.dapps.prcticasunidad1dapps.PracticacincoFragment"
+        android:label="Práctica 5"
+        tools:layout="@layout/fragment_practicacinco" />
+
+</navigation>
