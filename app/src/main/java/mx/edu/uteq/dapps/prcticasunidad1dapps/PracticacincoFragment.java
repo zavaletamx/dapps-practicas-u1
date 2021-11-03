@@ -32,7 +32,7 @@ public class PracticacincoFragment extends Fragment {
         binding = FragmentPracticacincoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        numeroAdivinar = new Random().nextInt(51); //Número aleatorio del 0 al 50
+        numeroAdivinar = new Random().nextInt(50); //Número aleatorio del 0 al 50
 
         Toast.makeText(
                 getActivity(),
@@ -79,6 +79,7 @@ public class PracticacincoFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        timer.cancel();
         binding = null;
     }
 
