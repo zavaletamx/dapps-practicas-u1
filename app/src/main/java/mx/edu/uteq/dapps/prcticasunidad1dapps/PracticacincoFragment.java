@@ -32,7 +32,9 @@ public class PracticacincoFragment extends Fragment {
         binding = FragmentPracticacincoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        numeroAdivinar = new Random().nextInt(50); //Número aleatorio del 0 al 50
+        mostrarVidas();
+
+        numeroAdivinar = new Random().nextInt(51); //Número aleatorio del 0 al 50
 
         Toast.makeText(
                 getActivity(),
@@ -59,13 +61,13 @@ public class PracticacincoFragment extends Fragment {
                 }
 
                 else if (numero > numeroAdivinar) {
-                    binding.tvNumeroUsuario.setText("TU NÚMERO ES MAYOR");
+                    binding.tvNumeroUsuario.setText("TU NÚMERO ES MAYOR AL MIO");
                     vidas--;
                     mostrarVidas();
                 }
 
                 else if (numero < numeroAdivinar) {
-                    binding.tvNumeroUsuario.setText("TU NÚMERO ES MENOR");
+                    binding.tvNumeroUsuario.setText("TU NÚMERO ES MENOR AL MIO");
 
                     vidas--;
                     mostrarVidas();
