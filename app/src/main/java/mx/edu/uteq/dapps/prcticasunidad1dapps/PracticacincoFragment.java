@@ -46,8 +46,13 @@ public class PracticacincoFragment extends Fragment {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                binding.tvTiempo.setText(String.valueOf(timeCounter));
-                timeCounter++;
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        binding.tvTiempo.setText(String.valueOf(timeCounter));
+                        timeCounter++;
+                    }
+                });
             }
         }, 1000, 1000);
 
